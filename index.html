@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Happy Monthsary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=DM+Sans:wght@400;500&amp;family=Parisienne&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="progress"></div>
+    <header class="nav"><a href="#hero" class="brand" aria-label="Home"><i data-i="heart"></i></a>
+        <button id="menuBtn" class="icon-btn" aria-label="Open menu" aria-expanded="false"><i data-i="menu"></i></button>
+        <nav id="menu" aria-label="Sections"><a href="#letter">Letter</a><a href="#counter">Together</a><a href="#memories">Memories</a><a href="#reasons">Reasons</a><a href="#song">Song</a><a href="#timeline">Story</a><a href="#openwhen">Open When</a><a href="#gift">Gift</a><a href="#closing">Closing</a></nav>
+    </header>
+    <main>
+        <section id="hero" class="ivory hero">
+            <div class="floaters" aria-hidden="true"></div>
+            <p class="label">A little something for you</p>
+            <h1 id="title"></h1>
+            <p class="script">Another beautiful chapter of our story.</p>
+            <p class="names"><span id="nPartner"></span><i data-i="heart" class="gold"></i><span id="nSender"></span></p>
+            <p class="small" id="heroDur"></p>
+            <button class="env-mini" id="heroEnv" aria-label="Open your letter"><svg viewbox="0 0 120 80" aria-hidden="true">
+                    <rect width="120" height="80" rx="4" fill="#651C32"></rect>
+                    <path d="M0 0l60 44L120 0" fill="#82394D" stroke="#C6A46A" stroke-width="1"></path>
+                    <circle cx="60" cy="44" r="9" fill="#C6A46A"></circle>
+                </svg></button>
+            <div class="row">
+                <button class="btn" id="openLetter">Open Your Letter</button><a class="btn ghost" href="#memories">Explore Our Story</a>
+            </div>
+        </section>
+
+        <section id="letter" class="burg">
+            <h2 id="letterTitle"></h2>
+            <div class="env" id="env">
+                <button class="env-btn" id="envBtn" aria-expanded="false" aria-controls="paper"><span class="flap"></span><span class="seal"><i data-i="heart"></i></span><span class="sr">Open or close the letter</span></button>
+                <article class="paper" id="paper" aria-live="polite">
+                    <div class="paper-in">
+                        <p class="script big" id="firstLine"></p>
+                        <div id="letterRest"></div>
+                        <p class="script sign" id="sign"></p>
+                    </div>
+                </article>
+            </div>
+            <div class="row">
+                <button class="btn gold" id="closeLetter">Close Letter</button><button class="btn gold" id="reopenLetter">Reopen Letter</button>
+            </div>
+        </section>
+
+        <section id="counter" class="ivory center">
+            <h2>Our Time Together</h2>
+            <div class="rule"></div>
+            <div class="count" id="count"></div>
+            <p class="script">Every moment with you is another memory worth keeping.</p>
+        </section>
+
+        <section id="memories" class="ivory">
+            <h2>Our Memories</h2>
+            <p class="sub">Tap a photograph to see it larger.</p>
+            <div class="gallery" id="gallery"></div>
+        </section>
+
+        <section id="reasons" class="burg center">
+            <h2>Little Things I Love About You</h2>
+            <p class="sub">Some of the many reasons you mean so much to me.</p>
+            <div class="cards" id="cards"></div>
+            <div class="row"><button class="btn gold" id="moreReason">Discover Another Reason</button></div>
+            <p class="small" id="reasonProg"></p>
+        </section>
+
+        <section id="song" class="ivory">
+            <h2 class="center">Our Special Song</h2>
+            <div class="player">
+                <div class="vinyl" id="vinyl"><span class="label-disc" id="cover"></span></div>
+                <div class="pl">
+                    <h3 id="songTitle"></h3>
+                    <p id="songArtist" class="small"></p>
+                    <p class="script" id="songCap"></p>
+                    <div class="row left">
+                        <button class="icon-btn solid" id="playBtn" aria-label="Play"><i data-i="play"></i></button>
+                        <input id="seek" type="range" min="0" max="100" value="0" aria-label="Song progress"><span id="time" class="small">0:00 / 0:00</span>
+                    </div>
+                    <div class="row left">
+                        <i data-i="volume"></i><input id="vol" type="range" min="0" max="1" step="0.05" value="0.8" aria-label="Volume">
+                    </div>
+                    <p class="small" id="songMsg"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="timeline" class="ivory">
+            <h2 class="center">Our Love Story</h2>
+            <ol class="tl" id="tl"></ol>
+        </section>
+
+        <section id="openwhen" class="ivory center">
+            <h2>Open When</h2>
+            <p class="sub">Little letters for the moments you need them.</p>
+            <div class="mini" id="mini"></div>
+        </section>
+
+        <section id="gift" class="burg center">
+            <h2>A Small Surprise</h2>
+            <button class="gift" id="giftBtn" aria-expanded="false" aria-label="Open the gift"><svg viewbox="0 0 160 150" aria-hidden="true">
+                    <g class="lid">
+                        <rect x="12" y="38" width="136" height="28" rx="3" fill="#82394D" stroke="#C6A46A"></rect>
+                        <rect x="72" y="38" width="16" height="28" fill="#C6A46A"></rect>
+                        <path d="M80 38C60 8 40 24 80 38C120 24 100 8 80 38" fill="none" stroke="#C6A46A" stroke-width="3"></path>
+                    </g>
+                    <rect x="22" y="66" width="116" height="76" fill="#82394D" stroke="#C6A46A"></rect>
+                    <rect x="72" y="66" width="16" height="76" fill="#C6A46A"></rect>
+                </svg><span class="petals" aria-hidden="true"></span></button>
+            <div class="reveal" id="giftMsg">
+                <p class="script big" id="giftText"></p>
+                <div class="polaroid"><img id="giftImg" alt="A secret photograph" loading="lazy"></div>
+            </div>
+            <div class="row"><button class="btn gold" id="giftToggle">Open the Gift</button></div>
+        </section>
+
+        <section id="closing" class="burg center closing">
+            <h2>To My Favorite Person</h2>
+            <div class="polaroid"><img id="finalImg" alt="Our photograph" loading="lazy"></div>
+            <p class="msg">Thank you for being part of my story, for the memories we have made, and for all the little moments that continue to make us who we are. No matter how many chapters come next, I hope we keep finding reasons to choose each other.</p>
+            <p class="names"><span id="cP"></span><i data-i="heart" class="gold"></i><span id="cS"></span></p>
+            <p class="script big" id="cSign"></p>
+            <div class="row">
+                <button class="btn gold" id="again">Read the Letter Again</button><button class="btn gold" id="last">One Last Surprise</button>
+            </div>
+            <p class="script big reveal" id="lastMsg"></p>
+            <p class="script big">Every chapter is more beautiful with you in it.</p>
+        </section>
+    </main>
+    <button id="top" class="icon-btn solid" aria-label="Back to top"><i data-i="up"></i></button>
+    <dialog id="dlg"><button class="icon-btn" id="dClose" aria-label="Close"><i data-i="x"></i></button>
+        <div id="dBody"></div>
+    </dialog>
+    <script src="script.js"></script>
+</body>
+
+</html>
